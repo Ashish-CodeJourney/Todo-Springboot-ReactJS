@@ -18,12 +18,22 @@ const TodoList = () => {
   };
 
   return (
-    <div className="container mx-auto mt-4">
-      <h1 className="text-2xl font-bold mb-4">Todo List</h1>
-      <ul className="space-y-2">
+    <div className="container mx-auto mt-8 p-4 max-w-4xl">
+      <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">Todo List</h1>
+      <ul className="space-y-4">
         {todos.map((todo) => (
-          <li key={todo.id} className="bg-gray-100 p-2 rounded shadow">
-            <strong>ID:</strong> {todo.id} - <strong>Content:</strong> {todo.content}
+          <li
+            key={todo.id}
+            className="bg-gray-100 p-4 rounded-lg shadow hover:shadow-lg transform transition-all duration-300 ease-in-out"
+          >
+            <div className="flex justify-between items-center">
+              <span className="text-lg font-medium">
+                <strong>ID:</strong> {todo.id}
+              </span>
+              <span className="text-lg font-medium">
+                <strong>Content:</strong> {todo.content}
+              </span>
+            </div>
           </li>
         ))}
       </ul>
