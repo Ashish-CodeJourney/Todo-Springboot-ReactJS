@@ -10,10 +10,10 @@ updates:
     schedule:
       interval: "daily"
   - package-ecosystem: npm
-    directory: "/frontend"
+    directory: "/frontend/"
     schedule:
       interval: "daily"
   - package-ecosystem: gradle
-    directory: "/backend"
+    directory: "/backend/"
     schedule:
       interval: "daily"
